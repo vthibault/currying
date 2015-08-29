@@ -1,6 +1,8 @@
-function add() {
-  // TODO
-}
+// 74 characters
+let add=(...p)=>(f=>(f.toString=b=>eval(p.join('+')),f))(add.bind(p,...p))
+
+// 70 characters (cheating using global variable "$", working on jsbin.com and babeljs.io/repl/)
+// let add=(...p)=>(($=add.bind(p,...p)).toString=b=>eval(p.join('+')),$)
 
 function test(a, b) {
   if (a == b) {
